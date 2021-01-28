@@ -2,6 +2,9 @@
 
 > A Vue.js project
 
+## Demo
+https://ljc-myblog-app.firebaseapp.com/
+
 ## Build Setup
 
 ``` bash
