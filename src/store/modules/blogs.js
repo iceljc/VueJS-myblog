@@ -10,16 +10,22 @@ const mutations = {
         state.blogs = blogs;
     },
     'ADD_NEW_BLOG': (state, blog) => {
-        state.blogs.unshift(blog);
+        const tmp_blogs = state.blogs.slice();
+        tmp_blogs.unshift(blog);
+        state.blogs = tmp_blogs;
     },
     'UPDATE_BLOG': (state, data) => {
-        let idx = data.id;
-        let blog = data.blog;
-        state.blogs.splice(idx, 1);
-        state.blogs.unshift(blog);
+        const idx = data.id;
+        const new_blog = data.blog;
+        const tmp_blogs = state.blogs.slice();
+        tmp_blogs.splice(idx, 1);
+        tmp_blogs.unshift(new_blog);
+        state.blogs = tmp_blogs;
     },
     'DELETE_BLOG': (state, idx) => {
-        state.blogs.splice(idx, 1);
+        const tmp_blogs = state.blogs.slice();
+        tmp_blogs.splice(idx, 1);
+        state.blogs = tmp_blogs;
     }
 };
 
