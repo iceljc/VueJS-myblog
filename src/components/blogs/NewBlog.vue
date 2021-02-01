@@ -92,7 +92,7 @@ export default {
             this.addBlog(blog);
             this.title = '';
             this.content = '';
-            this.$router.push({name: 'blogs'});
+            this.$router.replace({name: 'blogs'});
         },
         backToBlogs: function() {
             this.$router.push({name: 'blogs'});
